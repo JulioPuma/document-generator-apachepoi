@@ -18,11 +18,9 @@ public class GeneratorController {
 
     private final GeneratorServiceImpl generatorServiceImpl;
 
-    @PostMapping("/{documento}/{plantilla}")
-    public Mono<ResponseStatus> generateDocument(
-      @PathVariable(name = "documento") String documento,
-      @PathVariable(name = "plantilla") String plantilla){
+    @PostMapping("")
+    public Mono<ResponseStatus> generateDocument(){
         log.info("Init generate document");
-        return generatorServiceImpl.generateDocument(documento, plantilla);
+        return generatorServiceImpl.generateDocument();
     }
 }

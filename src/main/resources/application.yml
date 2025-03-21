@@ -13,3 +13,8 @@ logging:
   level:
     org.springframework.web: ERROR
     com.template.springproject: TRACE
+
+azure:
+  storage:
+    connection-string: ''
+    container-name: 'carpeta'
